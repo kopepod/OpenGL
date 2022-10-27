@@ -97,8 +97,8 @@ file:///{SomeDIR}/project
 ```
 
 ```
-{
 // launch.json
+{
     "version": "0.2.0",
     "configurations": [
         {

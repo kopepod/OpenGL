@@ -30,7 +30,7 @@ Download from here https://code.visualstudio.com/download
 sudo dpkg -i codeXXXX.deb
 ```
 
-## Create a project
+## 3. Create a project
 * Files
 ```
 mkdir NewProject
@@ -38,7 +38,9 @@ cd NewProject
 code .
 nano Main.c
 ```
-* Code
+* Code: 
+- Copy-paste into a new Main.cpp file
+- 
 ```
 #include <GL/glut.h>
 
@@ -66,11 +68,57 @@ int main(int argc, char** argv)
     return 0;
 }
 ```
-* Compile
+* Compile from terminal
 ```
 $ g++ Main.cpp -o runme -lglut -lGLU -lGL
 ```
-* Run
+* Run from terminal
 ```
 $ ./runme
 ```
+## 4. Run from VSCode
+
+- Click Extensions (Ctrl+Shift+x)
+- Install C/C++ and C/C++ Extension Pack
+- Run (F5)
+- Create a _launch.json_ file
+
+```
+{
+// _launch.json
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C/C++: gcc build and debug active file",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "args": [
+                "-lGL","-lGLU","-lglut"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "C/C++: gcc build active file",
+            "miDebuggerPath": "/usr/bin/gdb"
+        }
+    ]
+}
+```
+
+
+

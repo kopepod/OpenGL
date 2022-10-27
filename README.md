@@ -33,10 +33,10 @@ sudo dpkg -i codeXXXX.deb
 ## 3. Create a project
 * Files
 ```
-mkdir NewProject
-cd NewProject
+mkdir project
+cd project
 code .
-nano Main.c
+nano Main.cpp
 ```
 * Code: 
 - Copy-paste into a new Main.cpp file

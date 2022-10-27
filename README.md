@@ -87,6 +87,7 @@ $ ./runme
 
 This is how the tree looks like:
 ```
+$ gio tree -h
 file:///{SomeDIR}/project
 |-- .vscode
 |   |-- launch.json

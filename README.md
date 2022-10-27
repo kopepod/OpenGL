@@ -85,7 +85,7 @@ $ ./runme
 
 ```
 {
-// _launch.json
+// launch.json
     "version": "0.2.0",
     "configurations": [
         {

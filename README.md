@@ -70,11 +70,11 @@ int main(int argc, char** argv)
 ```
 * Compile from terminal
 ```
-$ g++ Main.cpp -o runme -lglut -lGLU -lGL
+$ g++ Main.cpp -o Main -lglut -lGLU -lGL
 ```
 * Run from terminal
 ```
-$ ./runme
+$ ./Main
 ```
 ## 4. Run from VSCode
 

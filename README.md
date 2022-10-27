@@ -40,7 +40,6 @@ nano Main.cpp
 ```
 * Code: 
 - Copy-paste into a new Main.cpp file
-- 
 ```
 #include <GL/glut.h>
 

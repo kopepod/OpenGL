@@ -9,30 +9,31 @@ This is a tutorial to install and run OpenGL for Linux. Steps:
 
 ## 1. Install OpenGL dependencies
 
-```
-sudo apt-get update  
-sudo apt-get install freeglut3 -y
-sudo apt-get install freeglut3-dev -y 
-sudo apt-get install binutils-gold -y 
-sudo apt-get install g++ cmake -y 
-sudo apt-get install libglew-dev -y 
-sudo apt-get install g++ -y 
-sudo apt-get install mesa-common-dev -y 
-sudo apt-get install build-essential -y 
-sudo apt-get install libglew1.5-dev libglm-dev -y 
+```bash
+sudo apt update  
+sudo apt install gdb -y
+sudo apt install freeglut3 -y
+sudo apt install freeglut3-dev -y 
+sudo apt install binutils-gold -y 
+sudo apt install g++ cmake -y 
+sudo apt install libglew-dev -y 
+sudo apt install g++ -y 
+sudo apt install mesa-common-dev -y 
+sudo apt install build-essential -y 
+sudo apt install libglew1.5-dev libglm-dev -y 
 ```
 
 ## 2. Install VSCode
 
 Download from here https://code.visualstudio.com/download
 
-```
+```bash
 sudo dpkg -i codeXXXX.deb
 ```
 
 ## 3. Create a project
 * Files
-```
+```bash
 mkdir project
 cd project
 code .
@@ -40,7 +41,7 @@ nano Main.cpp
 ```
 * Code: 
 - Copy-paste into a new Main.cpp file
-```
+```c++
 #include <GL/glut.h>
 
 void displayMe(void)
@@ -68,12 +69,12 @@ int main(int argc, char** argv)
 }
 ```
 * Compile from terminal
-```
-$ g++ Main.cpp -o Main -lglut -lGLU -lGL
+```bash
+g++ Main.cpp -o Main -lglut -lGLU -lGL
 ```
 * Run from terminal
-```
-$ ./Main
+```bash
+./Main
 ```
 ## 4. Run from VSCode
 
@@ -85,8 +86,8 @@ $ ./Main
 - Save the json files inside .vscode (hidden)
 
 This is how the tree looks like:
-```
-$ gio tree -h
+```bash
+gio tree -h
 file:///{SomeDIR}/project
 |-- .vscode
 |   |-- launch.json
@@ -95,7 +96,7 @@ file:///{SomeDIR}/project
 |-- Main.cpp
 ```
 
-```
+```json
 // launch.json
 {
     "version": "0.2.0",
@@ -132,7 +133,7 @@ file:///{SomeDIR}/project
 }
 ```
 
-```
+```json
 // tasks.json
 {
     "tasks": [
